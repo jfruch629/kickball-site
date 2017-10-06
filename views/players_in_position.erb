@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Positons</title>
+  <link rel="stylesheet" href="./stylesheets/app.css">
+</head>
+
+<body>
+  <h1> Players Who Play <%= @position %>  </h1>
+  <ul>
+    <% TeamData::ROLL_CALL.each do |team_name, roster| %>
+      <% roster.each do |position, person| %>
+
+        <% if @position == position.to_s %>
+          <li><%= "#{person}: #{team_name}" %></li>
+          <% end %>
+        <% end %>
+    <% end %>
+  </ul>
+
+  <a href="/positions">Return To Positions</a>
+  <br>
+  <br>
+  <a href="/">Click Here To Return To The Homepage</a>
+
+</body>
+</html>

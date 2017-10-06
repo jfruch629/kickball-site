@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LACKP</title>
+  <link rel="stylesheet" href="./stylesheets/app.css">
+</head>
+
+<body>
+  <h1> The LACKP Teams List </h1>
+  <h2> Teams </h2>
+
+  <ul>
+    <% @teams.each do |team| %>
+    <li><a href="/teams/<%= team.name %>"><%= team.name %></a></li>
+    <% end %>
+  </ul>
+
+    <br>
+    <a href="/positions">Click Here For The List of Positions</a>
+    <br>
+    <br>
+    <a href="/">Click Here To Return To The Homepage</a>
+
+</body>
+</html>
